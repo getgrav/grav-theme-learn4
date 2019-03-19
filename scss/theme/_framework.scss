@@ -1,0 +1,178 @@
+$sidebar-width: 14rem;
+
+.off-canvas {
+    min-height: 100vh;
+
+    .off-canvas-content {
+        padding: .4rem 4rem;
+    }
+
+    .off-canvas-overlay {
+        background: rgba($dark-color, .5);
+    }
+
+    .learn-sidebar {
+
+        min-width: $sidebar-width;
+
+        .learn-brand {
+            position: fixed;
+            height: 150px;
+            width: $sidebar-width;
+            top: 0;
+            background: darken($bg-color-dark, 3%);
+            padding: 20px;
+
+            #logo {
+                display: inline-block;
+                margin: 0 2rem;
+            }
+        }
+
+        .learn-nav {
+            top: 150px;
+            bottom: 0;
+            width: $sidebar-width;
+            position: fixed;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+
+            .read-icon {
+                float: right;
+                margin-right: 5px;
+                margin-top: 2px;
+            }
+
+            ul {
+                list-style: none;
+                margin-left: 1rem;
+                margin-top: .2rem;
+
+                a {
+                    display: block;
+                    padding-top: 0.1rem;
+                    padding-bottom: 0.1rem;
+                }
+
+                &.topics {
+
+
+                    & > li {
+                        margin-top: .3rem;
+
+                        &.active, &.parent {
+                            background-color: $bg-color-dark;
+                        }
+                    }
+
+
+
+                }
+
+                li, ol {
+                    margin-top: .1rem;
+                }
+
+                ul {
+                    font-size: 0.7rem;
+                    display: none;
+                    margin-top: 0;
+                    margin-bottom: 0;
+
+
+                }
+
+                li {
+                    &.active > a {
+                        background-color: $link-color;
+                        color: #fff;
+                        margin-left: -0.4rem;
+                        padding-left: 0.4rem;
+
+                    }
+                }
+
+                .active ul, .parent ul {
+                    display: block;
+                }
+            }
+        }
+
+        .searchbox {
+            border: 1px solid $border-color;
+            background: $bg-color;
+            position: relative;
+
+            input {
+                border: 0;
+                background: transparent;
+                width: 100%;
+                padding: 4px 25px 4px 30px;
+            }
+
+            label {
+                position: absolute;
+                left: 8px;
+                top: 4px;
+            }
+
+            span {
+                position: absolute;
+                right: 8px;
+                top: 4px;
+                cursor: pointer;
+            }
+        }
+
+        .search-options {
+            margin-top: 10px;
+        }
+    }
+
+    .learn-content {
+        position: relative;
+        width: calc(100% - #{$sidebar-width});
+
+        @include breakpoint(lg) {
+            width: 100%;
+        }
+
+        #learn-navigation {
+            > a {
+                position: fixed;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 0;
+                bottom: 0;
+                width: 3rem;
+                font-size: 60px;
+                text-decoration: none;
+
+                &:hover {
+                    background: $bg-color;
+                    color: $link-color-dark;
+                }
+
+                &.nav-prev {
+                    left: $sidebar-width;
+
+                    @include breakpoint(lg) {
+                        left: 0;
+                    }
+                }
+
+                &.nav-next {
+                    right: 0;
+                }
+            }
+
+        }
+    }
+}
+
+#body-inner {
+    pre {
+        white-space: pre-wrap;
+    }
+}
