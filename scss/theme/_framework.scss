@@ -3,6 +3,15 @@ $sidebar-width: 14rem;
 .off-canvas {
     min-height: 100vh;
 
+    .off-canvas-toggle {
+        position: fixed;
+        top: .2rem;
+        left: 0.2rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        padding-top: .15rem;
+    }
+
     .off-canvas-content {
         padding: .4rem 4rem;
     }
@@ -133,10 +142,6 @@ $sidebar-width: 14rem;
         position: relative;
         width: calc(100% - #{$sidebar-width});
 
-        @include breakpoint(lg) {
-            width: 100%;
-        }
-
         #learn-navigation {
             > a {
                 position: fixed;
@@ -148,6 +153,7 @@ $sidebar-width: 14rem;
                 width: 3rem;
                 font-size: 60px;
                 text-decoration: none;
+                transition: background-color 0.5s ease, color 0.5s ease;
 
                 &:hover {
                     background: $bg-color;
@@ -156,16 +162,35 @@ $sidebar-width: 14rem;
 
                 &.nav-prev {
                     left: $sidebar-width;
-
-                    @include breakpoint(lg) {
-                        left: 0;
-                    }
                 }
 
                 &.nav-next {
                     right: 0;
                 }
+
+
             }
+
+        }
+
+        @include breakpoint(lg) {
+
+            width: 100%;
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+            #learn-navigation {
+                > a {
+                    font-size: 30px;
+                    width: 2rem;
+
+                    &.nav-prev {
+                        left: 0;
+                    }
+                }
+            }
+
+
 
         }
     }
