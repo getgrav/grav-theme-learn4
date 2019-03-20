@@ -135,9 +135,9 @@ $sidebar-width: 14rem;
         }
 
         .searchbox {
-            border: 1px solid rgba(#fff, 0.1);
-            background: rgba(#fff, 0.05);
             position: relative;
+            border: 1px solid rgba(#fff, 0.1);
+            background: rgba(#000, 0.1);
             color: rgba(#fff, 0.6);
             border-radius: 2px;
 
@@ -171,6 +171,18 @@ $sidebar-width: 14rem;
 
         .search-options {
             margin-top: 10px;
+
+            .version-chooser select {
+                display: inline-block;
+                border: 1px solid rgba(#fff, 0.1);
+                background: rgba(#000, 0.1);
+                color: #fff;
+                border-radius: 2px;
+                font-size: 16px;
+                font-weight: 700;
+                margin: 0;
+                letter-spacing: 1px;
+            }
         }
     }
 
