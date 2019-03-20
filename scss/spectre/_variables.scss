@@ -5,10 +5,10 @@ $version: "0.5.8";
 $rtl: false !default;
 
 // Core colors
-$primary-color: #3085EE !default;
+$primary-color: #1AA3ED !default;
 $primary-color-dark: darken($primary-color, 3%) !default;
 $primary-color-light: lighten($primary-color, 3%) !default;
-$secondary-color: lighten($primary-color, 37.5%) !default;
+$secondary-color: #38C5C7 !default;
 $secondary-color-dark: darken($secondary-color, 3%) !default;
 $secondary-color-light: lighten($secondary-color, 3%) !default;
 

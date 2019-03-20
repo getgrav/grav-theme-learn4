@@ -21,20 +21,39 @@ $sidebar-width: 14rem;
     }
 
     .learn-sidebar {
-
+        background: linear-gradient(to bottom, #633E67, #283A63);
         min-width: $sidebar-width;
+        color: rgba(#fff, 0.6);
+
+        a {
+            color: rgba(#fff, 0.8);
+        }
+
+        .padding {
+            padding-left: 1rem;
+        }
+
+        hr {
+            border: 0;
+            border-bottom: 1px solid rgba(#fff, 0.1);
+        }
 
         .learn-brand {
             position: fixed;
             height: 150px;
             width: $sidebar-width;
             top: 0;
-            background: darken($bg-color-dark, 3%);
-            padding: 20px;
+            background: rgba(#000, 0.3);
+            padding: 10px 20px;
 
             #logo {
                 display: inline-block;
-                margin: 0 2rem;
+                margin: 0 2rem 10px;
+
+                path {
+                    fill: rgba(#fff, 0.8) !important;
+                }
+
             }
         }
 
@@ -42,6 +61,7 @@ $sidebar-width: 14rem;
             top: 150px;
             bottom: 0;
             width: $sidebar-width;
+            padding-bottom: 1rem;
             position: fixed;
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
@@ -70,7 +90,9 @@ $sidebar-width: 14rem;
                         margin-top: .3rem;
 
                         &.active, &.parent {
-                            background-color: $bg-color-dark;
+                            background-color: rgba(#000, 0.2);
+                            margin-left: -1rem;
+                            padding-left: 1rem;
                         }
                     }
 
@@ -83,7 +105,7 @@ $sidebar-width: 14rem;
                 }
 
                 ul {
-                    font-size: 0.7rem;
+                    font-size: 0.75rem;
                     display: none;
                     margin-top: 0;
                     margin-bottom: 0;
@@ -99,6 +121,11 @@ $sidebar-width: 14rem;
                         padding-left: 0.4rem;
 
                     }
+
+                    a > span > b {
+                        font-weight: normal;
+                        color: rgba(#fff, 0.6);
+                    }
                 }
 
                 .active ul, .parent ul {
@@ -108,15 +135,24 @@ $sidebar-width: 14rem;
         }
 
         .searchbox {
-            border: 1px solid $border-color;
-            background: $bg-color;
+            border: 1px solid rgba(#fff, 0.1);
+            background: rgba(#fff, 0.05);
             position: relative;
+            color: rgba(#fff, 0.6);
+            border-radius: 2px;
+
+            ::placeholder {
+                color: rgba(#fff, 0.4);
+            }
 
             input {
                 border: 0;
                 background: transparent;
                 width: 100%;
                 padding: 4px 25px 4px 30px;
+                color: rgba(#fff, 0.8);
+
+
             }
 
             label {
@@ -167,25 +203,35 @@ $sidebar-width: 14rem;
                 &.nav-next {
                     right: 0;
                 }
-
-
             }
-
         }
 
         @include breakpoint(lg) {
 
             width: 100%;
-            padding-left: 2rem;
-            padding-right: 2rem;
+            padding-left: 2.5rem;
+            padding-right: 0.5rem;
 
             #learn-navigation {
                 > a {
                     font-size: 30px;
                     width: 2rem;
+                    border-right: 1px solid $bg-color-dark;
+                    background: $bg-color;
+
+                    &:hover, &:active {
+                        background: $bg-color-dark;
+                    }
 
                     &.nav-prev {
                         left: 0;
+                        bottom: 50%;
+                        border-bottom: 1px solid $bg-color-dark;
+                    }
+
+                    &.nav-next {
+                        left: 0;
+                        top: 50%;
                     }
                 }
             }
