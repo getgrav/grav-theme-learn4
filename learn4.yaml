@@ -1,5 +1,5 @@
 enabled: true
-production-mode: true
+production-mode: false
 grid-size: grid-lg
 header-fixed: true
 header-animated: true
@@ -8,5 +8,5 @@ header-transparent: false
 sticky-footer: false
 blog-page: '/blog'
 spectre:
-  exp: true
+  exp: false
   icons: false

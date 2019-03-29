@@ -1,55 +1,12 @@
-html {
-  @include fluid-type($size-xs, $size-xl, $min-responsive-font-size, $html-font-size);
-}
-
 // Header Overrides
 h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
-  font-family: $title-font-family;
   color: darken($body-font-color, 10%);
 }
 
-h1, .h1 {
+h1 {
   font-size: 3rem;
-}
-
-h2, .h2 {
-  font-size: 1.8rem;
-}
-
-h6, .h6 {
-  font-weight: 400;
-}
-
-.title-center {
-  h1, h2 {
-    text-align: center;
-  }
-}
-
-.title-h1h2 {
-  h1  {
-    font-weight: 100;
-    margin-bottom: 0;
-    line-height: 1.1;
-
-    strong, bold {
-      font-weight: 400;
-    }
-  }
-  h1 + h2 {
-    line-height: 1.1;
-    margin-top: 0;
-  }
-
-}
-
-// Typography Hints
-.title-h1h2, .title-center {
-  h1 + h2 {
-    margin-bottom: 50px;
-    font-weight: 700;
-  }
+  font-weight: 500;
 }
 
 a {
@@ -68,7 +25,6 @@ a {
 img {
   max-width: 100%;
 }
-
 
 // Codeblocks
 pre code, pre.xdebug-var-dump{
@@ -89,8 +45,6 @@ pre {
 
 // Icon Tweaks
 i.fa {
-
-
   &.fa-heart, &.fa-heart-o {
     &.pulse {
       color: #920
@@ -101,7 +55,7 @@ i.fa {
 // Font Weights
 b,
 strong {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .heavy {
@@ -110,15 +64,6 @@ strong {
 
 .light {
   font-weight: 200;
-}
-
-// Colors
-.text-light {
-  color: rgba($light-color, 0.8);
-
-  h1, h2, h3, h4, h5, h6 {
-    color: rgba($light-color, 0.9);
-  }
 }
 
 // Error configuration

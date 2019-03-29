@@ -9,7 +9,7 @@
         {% set current_page = p.active ? ' active' : '' %}
         <li class="dd-item{{ parent_page }}{{ current_page }}" data-nav-id="{{ p.route }}">
             <a href="{{ p.url }}" {% if p.header.class %}class="{{ p.header.class }}"{% endif %}>
-                <i class="fa fa-check read-icon"></i>
+                <i class="fa fa-check-circle read-icon"></i>
                 <span><b>{% if data_level == 0 %}{{ loop.index }}. {% endif %}</b>{{ p.menu }}</span>
             </a>
             {% if p.children.count > 0 %}
@@ -49,7 +49,7 @@
         </div>
     </div>
 </div>
-<div class="learn-nav">
+<div class="learn-nav" data-simplebar>
     <div class="highlightable">
         {% if theme_config.top_level_version %}
             {% for slug, ver in pages.children %}

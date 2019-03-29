@@ -16,10 +16,11 @@
     <link rel="canonical" href="{{ page.url(true, true) }}" />
 {% endblock head %}
 
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+
+
 {% block stylesheets %}
     {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
-    {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
-    {% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
     {% do assets.addCss('theme://css-compiled/theme'~compress) %}
     {% do assets.addCss('theme://css/custom.css') %}
     {% do assets.addCss('theme://css/line-awesome.min.css') %}
@@ -27,8 +28,8 @@
 
 {% block javascripts %}
     {% do assets.addJs('jquery', 101) %}
-    {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
-    {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/clipboard.min.js') %}
+    {% do assets.addJs('theme://js/learn4.js', {group:'bottom'}) %}
 {% endblock %}
 
 {% block assets deferred %}
@@ -36,7 +37,7 @@
     {{ assets.js()|raw }}
 {% endblock %}
 </head>
-<body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
+<body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}" data-url="{{ page.route }}">
     <div id="page-wrapper" class="off-canvas off-canvas-sidebar-show">
         <!-- off-screen toggle button -->
         <a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
@@ -84,6 +85,7 @@
     </div>
 
     {% block bottom %}
+        <script src="https://unpkg.com/simplebar@latest/dist/simplebar.js"></script>
         {{ assets.js('bottom')|raw }}
     {% endblock %}
 </body>
