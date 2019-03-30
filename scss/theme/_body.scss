@@ -1,5 +1,30 @@
+.learn-content {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+    #start {
+        flex: 1;
+        padding: 2rem 3rem;
+
+        @include breakpoint(lg) {
+            padding: 2rem 1rem;
+        }
+    }
+}
+
 #body-inner {
     pre {
         white-space: pre-wrap;
+    }
+}
+
+#footer {
+    border-top: 1px solid $gray-color-light;
+    margin-top: 1rem;
+    text-align: center;
+    p {
+        margin: 1rem 0;
     }
 }

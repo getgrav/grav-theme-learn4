@@ -1,12 +1,13 @@
 // Header Overrides
 h1, h2, h3, h4, h5, h6 {
-  margin-top: 2rem;
-  color: darken($body-font-color, 10%);
+    margin-top: 2rem;
+    color: darken($body-font-color, 10%);
+    line-height: 1;
 }
 
 h1 {
-  font-size: 3rem;
-  font-weight: 500;
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 a {
@@ -16,6 +17,7 @@ a {
         color: $link-color-dark;
         text-decoration: none;
     }
+
     &:focus {
         outline: none !important;
         box-shadow: none !important;
@@ -23,110 +25,173 @@ a {
 }
 
 img {
-  max-width: 100%;
+    max-width: 100%;
+}
+
+#chapter {
+    text-align: center;
+
+    h3 {
+        margin-top: 5rem;
+
+        & + h1 {
+            display: inline-block;
+            margin: 1rem auto 2rem;
+            line-height: 1.1;
+            font-size: 4rem;
+            border-bottom: 3px solid $gray-color-light;
+            max-width: 75%;
+        }
+    }
 }
 
 #body-inner {
-  :target {
-    padding-top: 50px;
-    margin-top: -50px;
-    display: inline-block;
-  }
+    :target {
+        padding-top: 50px;
+        margin-top: -50px;
+        display: inline-block;
+    }
 }
 
 // Codeblocks
-pre code, pre.xdebug-var-dump{
-  background: #fafafa;
-  display: block;
-  padding: 1rem !important;
-  line-height: 1.5;
-  color: inherit;
-  border-radius: 2px;
-  overflow-x: auto;
+pre code, pre.xdebug-var-dump {
+    background: #fafafa;
+    display: block;
+    padding: 1rem !important;
+    line-height: 1.5;
+    color: inherit;
+    border-radius: 2px;
+    overflow-x: auto;
 }
 
 pre {
-  code:not(.hljs) {
-    background: #f8f8f8;
-  }
+    code:not(.hljs) {
+        background: #f8f8f8;
+    }
 }
 
 // Icon Tweaks
 i.fa {
-  &.fa-heart, &.fa-heart-o {
-    &.pulse {
-      color: #920
+    &.fa-heart, &.fa-heart-o {
+        &.pulse {
+            color: #920
+        }
     }
-  }
 }
 
 // Font Weights
 b,
 strong {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 .heavy {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 .light {
-  font-weight: 200;
+    font-weight: 200;
 }
 
 // Error configuration
 #error {
-  text-align: center;
-  position: relative;
-  margin-top: 5rem;
+    text-align: center;
+    position: relative;
+    margin-top: 5rem;
 
-  .icon {
-    font-size: 50px;
-  }
+    .icon {
+        font-size: 50px;
+    }
 }
 
 // Messages
 #messages {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 
-  .icon {
-    font-size: 1rem;
-  }
+    .icon {
+        font-size: 1rem;
+    }
 }
 
 // Lists
 ul,
 ol {
-  margin-left: $unit-8;
-
-  ul,
-  ol {
     margin-left: $unit-8;
-  }
+
+    ul,
+    ol {
+        margin-left: $unit-8;
+    }
 }
 
 ul {
-  list-style: disc outside;
+    list-style: disc outside;
 }
 
 ol {
-  list-style: decimal outside;
+    list-style: decimal outside;
+}
+
+#navigation {
+    a.github-link {
+        font-size: inherit !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+
+        i {
+            padding-right: 5px;
+        }
+    }
 }
 
 // Notices
 .notices {
-  margin: 1.5rem 0;
-  p {
-    margin: 1rem 0;
-  }
+    margin: 1.5rem 0;
+    padding: 0.4rem;
+
+    p {
+        margin: 0 0 1.5rem 0.5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &.info {
+        border-left: 5px solid #f0ad4e;
+        background: #fcf8f2;
+        color: #df8a13;
+    }
+
+    &.warning {
+        border-left: 5px solid #d9534f;
+        background: #fdf7f7;
+        color: #b52b27;
+    }
+
+    &.note {
+        border-left: 5px solid #5bc0de;
+        background: #f4f8fa;
+        color: #28a1c5;
+    }
+
+    &.tip {
+        border-left: 5px solid #5cb85c;
+        background: #f1f9f1;
+        color: #3d8b3d;
+    }
+
 }
+
 
 // Wrap fixes
 audio {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 code {
-  word-break: break-word;
+    word-break: break-word;
 }
 
