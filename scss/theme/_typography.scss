@@ -26,6 +26,14 @@ img {
   max-width: 100%;
 }
 
+#body-inner {
+  :target {
+    padding-top: 50px;
+    margin-top: -50px;
+    display: inline-block;
+  }
+}
+
 // Codeblocks
 pre code, pre.xdebug-var-dump{
   background: #fafafa;

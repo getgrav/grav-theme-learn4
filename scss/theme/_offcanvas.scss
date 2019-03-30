@@ -11,7 +11,7 @@
     }
 
     .off-canvas-content {
-        padding: .4rem 4rem;
+        padding: 2rem 4rem 1rem;
     }
 
     .off-canvas-overlay {
@@ -22,6 +22,7 @@
         background: linear-gradient(150deg, #633E67 0, #283A63 100vh);
         min-width: $sidebar-width;
         color: rgba(#fff, 0.6);
+        overflow-y: inherit;
 
         a {
             color: rgba(#fff, 0.8);
@@ -61,8 +62,6 @@
             width: $sidebar-width;
             padding-bottom: 1rem;
             position: fixed;
-            //overflow-y: auto;
-            //-webkit-overflow-scrolling: touch;
 
             .read-icon {
                 float: right;
@@ -197,61 +196,56 @@
         position: relative;
         width: calc(100% - #{$sidebar-width});
 
-        #learn-navigation {
-            > a {
-                position: fixed;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                top: 0;
-                bottom: 0;
-                width: 3rem;
-                font-size: 60px;
-                text-decoration: none;
-                transition: background-color 0.5s ease, color 0.5s ease;
+        #top-bar {
+            position: fixed;
+            display: flex;
+            background: $bg-color;
+            border-bottom: 1px solid darken($bg-color, 4%);
 
-                &:hover {
-                    background: $bg-color;
-                    color: $link-color-dark;
+            align-items: center;
+
+            top: 0;
+            right: 0;
+            left: $sidebar-width;
+
+            @include breakpoint(lg) {
+                left: 0;
+            }
+
+            #breadcrumbs {
+                padding-left: 0.5rem;
+                line-height: 1.5;
+                height: auto;
+                width: 100%;
+
+                span, a {
+                    padding: 0 .5rem;
                 }
 
-                &.nav-prev {
-                    left: $sidebar-width;
-                }
-
-                &.nav-next {
-                    right: 0;
+                @include breakpoint(lg) {
+                    padding-left: 2rem;
                 }
             }
-        }
 
-        @include breakpoint(lg) {
 
-            width: 100%;
-            padding-left: 2.5rem;
-            padding-right: 0.5rem;
+            #navigation {
+                display: flex;
 
-            #learn-navigation {
                 > a {
-                    font-size: 30px;
-                    width: 2rem;
-                    border-right: 1px solid $bg-color-dark;
-                    background: $bg-color;
+                    flex: 1;
+                    width: 100px;
+                    text-align: center;
+                    border-left: 1px solid darken($bg-color, 4%);
 
-                    &:hover, &:active {
-                        background: $bg-color-dark;
+                    font-size: 27px;
+                    text-decoration: none;
+                    transition: background-color 0.5s ease, color 0.5s ease;
+
+                    &:hover {
+                        background: darken($bg-color, 4%);
+                        color: $link-color-dark;
                     }
 
-                    &.nav-prev {
-                        left: 0;
-                        bottom: 50%;
-                        border-bottom: 1px solid $bg-color-dark;
-                    }
-
-                    &.nav-next {
-                        left: 0;
-                        top: 50%;
-                    }
                 }
             }
         }

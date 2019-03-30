@@ -52,7 +52,9 @@
         <a class="off-canvas-overlay" href="#close"></a>
 
         <div class="learn-content off-canvas-content">
-            {% block hero %}{% endblock %}
+            {% block topbar %}
+                {% include 'partials/topbar.html.twig' %}
+            {% endblock %}
 
             <section id="start">
                 {% block body %}
@@ -60,17 +62,6 @@
                         <section class="container {{ grid_size }}">
                             {% block messages %}
                                 {% include 'partials/messages.html.twig' ignore missing %}
-                            {% endblock %}
-                            {% block navigation %}
-                            <div id="learn-navigation">
-                                {% if not progress.isFirst(page.path) %}
-                                    <a class="nav-prev" href="{{ progress.nextSibling(page.path).url }}"> <i class="fa fa-chevron-left"></i></a>
-                                {% endif %}
-
-                                {% if not progress.isLast(page.path) %}
-                                    <a class="nav-next" href="{{ progress.prevSibling(page.path).url }}"><i class="fa fa-chevron-right"></i></a>
-                                {% endif %}
-                            </div>
                             {% endblock %}
                             {% block content %}{% endblock %}
                         </section>
