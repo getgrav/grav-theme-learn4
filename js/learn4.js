@@ -1,5 +1,16 @@
 jQuery(document).ready(function () {
 
+    // // set a variable for the anchor link which is the location.hash
+    // var anchorLink = $(window.location.hash);
+    // // test to see if the link is a anchor link, if not the length will have no value, this is done to avoid js errors on non anchor links
+    // if ( anchorLink.length ) {
+    //     // set an element as the fixed entity, header in this case and get its height
+    //     var offsetSize = $("#top-bar").innerHeight();
+    //     // fire the animation from the top of the page to the anchor link offsetting by the fixed elements height, the number is the speed of the animation
+    //     $("html, body").animate({scrollTop: anchorLink.offset().top - offsetSize }, 500);
+    // }
+
+
 
     // jQuery('[data-sidebar-toggle]').on('click', function () {
     //     jQuery(document.body).toggleClass('sidebar-hidden');

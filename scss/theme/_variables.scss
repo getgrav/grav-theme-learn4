@@ -1,5 +1,18 @@
+// Colors
+$primary-color: #1AA3ED !default;
+$secondary-color: #38C5C7 !default;
+$dark-color: #454d5d !default;
+$gray-color: lighten($dark-color, 40%) !default;
+$gray-color-dark: darken($gray-color, 25%) !default;
+$border-color: lighten($dark-color, 60%) !default;
+$bg-color: lighten($dark-color, 66%) !default;
+
 // Sidebar
 $sidebar-width: 14rem;
 
 // Fonts
+$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
+$mono-font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace !default;
+$fallback-font-family: "Helvetica Neue", sans-serif !default;
+$body-font-family: $base-font-family, $fallback-font-family !default;
 $title-font-family: "Novacento Sans Wide", $base-font-family, $fallback-font-family !default;

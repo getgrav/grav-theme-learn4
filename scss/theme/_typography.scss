@@ -1,8 +1,13 @@
+body {
+    font-weight: 200;
+}
+
 // Header Overrides
 h1, h2, h3, h4, h5, h6 {
     margin-top: 2rem;
     color: darken($body-font-color, 10%);
     line-height: 1;
+    font-weight: 500;
 }
 
 h1 {
@@ -46,11 +51,21 @@ img {
 }
 
 #body-inner {
-    :target {
-        padding-top: 50px;
-        margin-top: -50px;
-        display: inline-block;
+
+    :target:before {
+        content: "";
+        display: block;
+        margin-top: -60px;
+        height: 60px;
+        width: 1px;
     }
+
+
+    //:target:not(.sticky-off) {
+    //    padding-top: 50px;
+    //    margin-top: -50px;
+    //    display: block;
+    //}
 }
 
 // Debug Code Blocks
