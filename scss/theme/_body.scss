@@ -7,6 +7,9 @@
     #start {
         flex: 1;
         padding: 2rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         @include breakpoint(lg) {
             padding: 2rem 1rem;

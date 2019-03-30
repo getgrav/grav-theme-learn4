@@ -11,8 +11,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 500;
+
+    @include breakpoint(sm) {
+        font-size: 2rem;
+    }
 }
 
 a {
@@ -29,23 +33,50 @@ a {
     }
 }
 
+// Table setup
+.table table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    text-align: left;
+}
+
 img {
     max-width: 100%;
 }
 
+ul, ol {
+    margin: 0 0 1.2rem 0;
+
+    ul, ol {
+        margin: 0;
+    }
+
+    ol {
+        list-style-type: decimal;
+    }
+
+    li {
+        padding-top: 0;
+    }
+}
+
 #chapter {
     text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 
     h3 {
-        margin-top: 5rem;
+        opacity: 0.7;
 
         & + h1 {
             display: inline-block;
             margin: 1rem auto 2rem;
-            line-height: 1.1;
-            font-size: 4rem;
             border-bottom: 3px solid $gray-color-light;
-            max-width: 75%;
+
+            @include breakpoint(sm) {
+                font-size: 2.5rem;
+            }
         }
     }
 }
