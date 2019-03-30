@@ -3,7 +3,7 @@
     display: flex;
     background: $bg-color;
     border-bottom: 1px solid darken($bg-color, 4%);
-
+    z-index: 1;
     align-items: center;
 
     top: 0;

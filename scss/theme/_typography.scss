@@ -53,22 +53,38 @@ img {
     }
 }
 
-// Codeblocks
-pre code, pre.xdebug-var-dump {
+// Debug Code Blocks
+pre.xdebug-var-dump {
     background: #fafafa;
     display: block;
-    padding: 1rem !important;
+    padding: 1rem;
     line-height: 1.5;
     color: inherit;
     border-radius: 2px;
     overflow-x: auto;
 }
 
-pre {
-    code:not(.hljs) {
-        background: #f8f8f8;
+#body-inner {
+    pre[class*="language-"] {
+        margin: 1.5rem 0;
     }
+
+    .no-margin-top pre[class*="language-"] {
+        margin-top: 0;
+    }
+
+    .no-margin-bottom pre[class*="language-"] {
+        margin-bottom: 0;
+    }
+
 }
+
+
+//pre {
+//    code:not(.language-*) {
+//        background: #f8f8f8;
+//    }
+//}
 
 // Icon Tweaks
 i.fa {
