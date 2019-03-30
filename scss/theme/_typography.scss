@@ -67,6 +67,11 @@ pre.xdebug-var-dump {
 #body-inner {
     pre[class*="language-"] {
         margin: 1.5rem 0;
+
+        code {
+            background: none;
+            padding: 0;
+        }
     }
 
     .no-margin-top pre[class*="language-"] {

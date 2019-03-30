@@ -59,4 +59,14 @@
             }
         }
     }
+
+    .progress {
+        position: absolute;
+        bottom: -1px;
+        background: linear-gradient(to right, $link-color var(--scroll), transparent 0);
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 1px;
+        z-index: 1;
+    }
 }
