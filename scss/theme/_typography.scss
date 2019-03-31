@@ -34,15 +34,27 @@ a {
 }
 
 // Table setup
-.table table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    text-align: left;
+.table {
+    & table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 1.2rem;
+    }
+
+    &.table-keycol {
+        tr > td:first-child, tr > th:first-child  {
+            white-space: nowrap;
+            width: 15%;
+        }
+    }
 }
 
 img {
     max-width: 100%;
+    margin: 0 auto;
+    display: block;
 }
 
 ul, ol {
