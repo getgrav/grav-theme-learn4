@@ -225,6 +225,59 @@ ol {
     }
 }
 
+// Tabs
+$tabs-color: #767693;
+$tabs-bg: #F8F9FA;
+.tabs-wrapper {
+
+    &.ui-theme-badges {
+        background: $tabs-bg;
+        border: 1px solid darken($tabs-bg, 2%);
+        border-radius: 0;
+
+        .tabs-nav {
+            margin: 0.25rem;
+
+            & > li {
+                margin-top: 0;
+            }
+            li {
+                a {
+                    color: $tabs-color;
+                    background: darken($tabs-bg, 6%);
+                    border-radius: 0;
+                }
+                &.current {
+                    a {
+                        background: darken($tabs-bg, 40%);
+                        color: #fff;
+                    }
+                }
+                &:not(.current) {
+                    a:hover {
+                        background: darken($tabs-bg, 9%)
+                    }
+                }
+            }
+        }
+
+        .tabs {
+            .tab {
+                padding: 0.25rem 0;
+
+                pre {
+                    margin-top: 0.5rem !important;
+                    margin-bottom: 0.5rem !important;
+                }
+
+
+            }
+        }
+
+    }
+
+}
+
 // Notices
 .notices {
     margin: 1.5rem 0;
@@ -270,7 +323,8 @@ audio {
     max-width: 100%;
 }
 
-code {
+pre[class*="language-"], code[class*="language-"] {
     word-break: break-word;
+    white-space: pre-wrap;
 }
 
