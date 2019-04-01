@@ -3,6 +3,7 @@ namespace Grav\Theme;
 
 use Grav\Common\Grav;
 use Grav\Common\Theme;
+use Pimple\Exception\UnknownIdentifierException;
 
 class Learn4 extends Theme
 {
@@ -36,8 +37,13 @@ class Learn4 extends Theme
 
     public function onTwigInitialized()
     {
-        $sc = $this->grav['shortcode'];
-        $sc->getHandlers()->addAlias('version', 'lang');
+        try {
+            $sc = $this->grav['shortcode'];
+            $sc->getHandlers()->addAlias('version', 'lang');
+        } catch (UnknownIdentifierException $e) {
+
+        }
+
 
         $twig = $this->grav['twig'];
 
