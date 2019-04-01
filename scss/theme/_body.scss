@@ -17,12 +17,6 @@
     }
 }
 
-#body-inner {
-    pre {
-        white-space: pre-wrap;
-    }
-}
-
 #footer {
     border-top: 1px solid $gray-color-light;
     margin-top: 1rem;
@@ -30,4 +24,42 @@
     p {
         margin: 1rem 0;
     }
+}
+
+.page-toc {
+    float: right;
+    width: 250px;
+    padding: 1rem;
+    background: darken($bg-color, 2%);
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    font-size: 0.7rem;
+
+    h4 {
+        margin: 0 0 1rem;
+    }
+
+    ul {
+        margin-left: 1rem;
+        margin-bottom: 0;
+    }
+
+    li {
+        margin-top: 0;
+    }
+
+    ul > li.first.last {
+        list-style: none;
+        margin: 0;
+        margin-left: -1rem;
+    }
+
+    // Fix issue with notices going under TOC
+    & + #body-inner {
+        > .notices, > .code-toolbar {
+            overflow: hidden;
+        }
+    }
+
 }

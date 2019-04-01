@@ -20,6 +20,12 @@
         height: auto;
         width: 100%;
 
+        @include breakpoint(sm) {
+            * {
+                display: none;
+            }
+        }
+
         > span, > a {
             padding: 0 .5rem !important;
 
@@ -31,6 +37,8 @@
         @include breakpoint(lg) {
             padding-left: 2rem;
         }
+        
+
     }
 
     #navigation {
