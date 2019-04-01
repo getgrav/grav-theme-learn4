@@ -19,6 +19,10 @@ jQuery(document).ready(function () {
     //     return false;
     // });
 
+    jQuery('.toc-toggle').on('click', function() {
+        jQuery('.page-toc').toggleClass('toc-closed');
+    });
+
     jQuery('[data-clear-history-toggle]').on('click', function () {
         sessionStorage.clear();
         location.reload();

@@ -40,15 +40,17 @@
 
         .learn-brand {
             position: fixed;
-            height: 150px;
+            height: $sidebar-brand-height;
             width: $sidebar-width;
             top: 0;
-            background: rgba(#000, 0.3);
+            //background: rgba(#000, 0.3);
+            //border-bottom: 1px solid rgba(#fff, 0.1);
             padding: 10px 20px;
+            box-shadow: 0 10px 10px -10px rgba(#000, 0.5);
 
             #logo {
                 display: inline-block;
-                margin: 0 2rem 10px;
+                margin: 0 2.5rem 10px;
 
                 path {
                     fill: rgba(#fff, 0.8) !important;
@@ -58,7 +60,7 @@
         }
 
         .learn-nav {
-            top: 150px;
+            top: $sidebar-brand-height;
             bottom: 0;
             width: $sidebar-width;
             padding-bottom: 1rem;
@@ -67,9 +69,11 @@
             .read-icon {
                 float: right;
                 margin-right: 12px;
-                margin-top: 2px;
+                margin-top: 5px;
                 display: none;
-                opacity: 0.5;
+                opacity: 0.8;
+                color: rgba(#fff, 0.6);
+                font-size: 12px;
             }
 
             .visited > a > .read-icon {
@@ -87,7 +91,28 @@
                     padding-bottom: 0.1rem;
                 }
 
+                &.searched {
+                    a {
+                        color: rgba(#fff, 0.5);
+                    }
+
+                    .search-match {
+                        a {
+                            color: rgba(#fff, 0.8);
+                            &:hover {
+                                color: rgba(#fff, 0.9);
+                            }
+                        }
+                    }
+                }
+
                 &.topics {
+
+                    &.searched {
+                        ul {
+                            display: block;
+                        }
+                    }
 
 
                     & > li {
@@ -149,7 +174,7 @@
             border-radius: 2px;
 
             ::placeholder {
-                color: rgba(#fff, 0.4);
+                color: rgba(#fff, 0.5);
             }
 
             input {
@@ -158,6 +183,8 @@
                 width: 100%;
                 padding: 4px 25px 4px 30px;
                 color: rgba(#fff, 0.8);
+                font-weight: 200;
+                font-size: 0.7rem;
 
 
             }
@@ -165,19 +192,30 @@
             label {
                 position: absolute;
                 left: 8px;
-                top: 4px;
+                top: 2px;
             }
 
             span {
                 position: absolute;
                 right: 8px;
-                top: 4px;
+                top: 2px;
                 cursor: pointer;
             }
         }
 
         .search-options {
             margin-top: 10px;
+
+            .adv-search {
+                font-size: 85%;
+                display: flex;
+                align-items: center;
+                padding-left: 0.6rem;
+
+                i {
+                    margin-right: 5px;
+                }
+            }
 
             .version-chooser select {
                 display: inline-block;

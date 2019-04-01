@@ -1,5 +1,10 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    {% include 'partials/page.html.twig' %}
+    {{ page.content }}
+
+    {% include 'partials/tntsearch.html.twig' with { in_page: true, placeholder: "Search the Grav documentation..." }%}
 {% endblock %}
+
+
+

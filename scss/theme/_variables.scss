@@ -6,6 +6,7 @@ $gray-color: lighten($dark-color, 40%) !default;
 $gray-color-dark: darken($gray-color, 25%) !default;
 $border-color: lighten($dark-color, 60%) !default;
 $bg-color: lighten($dark-color, 66%) !default;
+$code-color: #7676f4 !default;
 
 $turquoise: #1ABC9C;
 $green_sea: #16A085;
@@ -30,6 +31,7 @@ $asbestos: #7F8C8D;
 
 // Sidebar
 $sidebar-width: 14rem;
+$sidebar-brand-height: 140px;
 
 // Fonts
 $base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;

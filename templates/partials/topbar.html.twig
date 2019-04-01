@@ -21,7 +21,7 @@
     {% if not progress.isLast(page.path) %}
       <a class="nav-next tooltip tooltip-bottom" data-tooltip="Next Page" href="{{ progress.prevSibling(page.path).url }}"><i class="fa fa-angle-right"></i></a>
     {% else %}
-      <span class="disabled"><i class="fa fa-angle-left"></i></span>
+      <span class="disabled"><i class="fa fa-angle-right"></i></span>
     {% endif %}
   </div>
   <div class="progress"></div>

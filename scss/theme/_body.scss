@@ -1,3 +1,11 @@
+.center-content {
+    #start {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 .learn-content {
     position: relative;
     display: flex;
@@ -5,11 +13,7 @@
     flex-direction: column;
 
     #start {
-        flex: 1;
         padding: 2rem 3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
 
         @include breakpoint(lg) {
             padding: 2rem 1rem;
@@ -29,14 +33,36 @@
 .page-toc {
     float: right;
     width: 250px;
-    padding: 1rem;
+    padding: 0.5rem 0.75rem;
     background: darken($bg-color, 2%);
     margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-
+    margin-bottom: 1rem;
+    margin-top: 10px;
     font-size: 0.7rem;
+    overflow: hidden;
 
-    h4 {
+    .toc-toggle {
+        font-size: 1.2rem;
+        display: block;
+        float: right;
+        margin-top: -8px;
+        margin-right: -10px;
+        padding: 5px 10px;
+        line-height: 1;
+        color: lighten($body-font-color, 20%);
+        cursor: pointer;
+    }
+
+    &.toc-closed {
+        height: 40px;
+        margin-bottom: 0.5rem;
+
+        .toc-toggle .fa:before {
+            content: '\f107';
+        }
+    }
+
+    h5 {
         margin: 0 0 1rem;
     }
 
@@ -47,6 +73,15 @@
 
     li {
         margin-top: 0;
+        list-style: decimal;
+        color: lighten($body-font-color, 30%);
+        li {
+            list-style: decimal;
+            li {
+                list-style: square;
+            }
+        }
+
     }
 
     ul > li.first.last {
