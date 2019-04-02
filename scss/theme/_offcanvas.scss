@@ -47,8 +47,12 @@
             border-bottom: 1px solid rgba(#fff, 0.1);
         }
 
-        .simplebar-scrollbar:before {
-            background: rgba(#fff, 0.5);
+        .simplebar-scrollbar {
+            width: 5px;
+            &:before {
+                background: rgba(#fff, 0.5);
+            }
+
         }
 
         .learn-brand {
@@ -59,7 +63,7 @@
             //background: rgba(#000, 0.3);
             //border-bottom: 1px solid rgba(#fff, 0.1);
             padding: 10px 20px;
-            box-shadow: 0 10px 10px -10px rgba(#000, 0.5);
+            box-shadow: 0 10px 10px -10px rgba(#000, 0.3);
 
             #logo {
                 display: inline-block;
