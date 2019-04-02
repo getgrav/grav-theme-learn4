@@ -1,12 +1,6 @@
 enabled: true
 production-mode: false
 grid-size: grid-lg
-header-fixed: true
-header-animated: true
-header-dark: false
-header-transparent: false
-sticky-footer: false
-blog-page: '/blog'
 github:
   note: true
   link: true
