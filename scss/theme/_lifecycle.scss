@@ -56,22 +56,22 @@
             }
 
             &.level-3 {
-                background: lighten($peter_river,44%);
-                border: 4px solid $peter_river;
-                color: $peter_river;
+                background: lighten($peter-river,44%);
+                border: 4px solid $peter-river;
+                color: $peter-river;
 
                 h3 {
-                    background: $peter_river;
+                    background: $peter-river;
                 }
             }
 
             &.level-4 {
-                background: lighten($wet_asphalt,63%);
-                border: 4px solid $wet_asphalt;
-                color: $wet_asphalt;
+                background: lighten($wet-asphalt,63%);
+                border: 4px solid $wet-asphalt;
+                color: $wet-asphalt;
 
                 h3 {
-                    background: $wet_asphalt;
+                    background: $wet-asphalt;
                 }
             }
         }
