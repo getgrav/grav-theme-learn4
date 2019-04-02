@@ -41,6 +41,14 @@
     font-size: 0.7rem;
     overflow: hidden;
 
+    @include breakpoint(sm) {
+        float: none;
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
     .toc-toggle {
         font-size: 1.2rem;
         display: block;
