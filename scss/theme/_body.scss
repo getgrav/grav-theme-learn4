@@ -13,7 +13,11 @@
     flex-direction: column;
 
     #start {
-        padding: 2rem 2rem;
+        padding: 2rem 3rem;
+
+        @include breakpoint(xl) {
+            padding: 2rem 2rem;
+        }
 
         @include breakpoint(lg) {
             padding: 2rem 1rem;
@@ -36,7 +40,7 @@
     padding: 0.5rem 0.75rem;
     background: darken($bg-color, 2%);
     margin-left: 1.5rem;
-    margin-right: -1rem;
+    margin-right: 0;
     margin-bottom: 1rem;
     margin-top: 10px;
     font-size: 0.7rem;
@@ -47,7 +51,6 @@
         width: 100%;
         margin-top: 0.5rem;
         margin-left: 0;
-        margin-right: 0;
         margin-bottom: 0;
     }
 
