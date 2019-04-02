@@ -1,5 +1,8 @@
 body {
     font-weight: 200;
+    ::selection {
+        background: $selection-color;
+    }
 }
 
 div {
@@ -135,6 +138,15 @@ ul, ol {
         width: 1px;
     }
 
+    img {
+        margin: 1.2rem auto;
+
+        &.shadow {
+            margin: 2rem auto;
+            box-shadow: 0 10px 30px -5px rgba(#000, 0.1);
+        }
+    }
+
 
     //:target:not(.sticky-off) {
     //    padding-top: 50px;
@@ -155,8 +167,12 @@ pre.xdebug-var-dump {
 }
 
 #body-inner {
+
     pre {
         margin: 0.5rem 0;
+        ::selection {
+            background: $selection-color;
+        }
     }
 
     .code-toolbar {
