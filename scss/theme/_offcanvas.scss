@@ -20,10 +20,19 @@
     }
 
     .learn-sidebar {
-        background: linear-gradient(150deg, #633E67 0, #283A63 100vh);
-        min-width: $sidebar-width;
+        width: $sidebar-width;
         color: rgba(#fff, 0.6);
         overflow-y: inherit;
+
+        &:before {
+            position: fixed;
+            content: '';
+            background: linear-gradient(150deg, #633E67 0, #283A63 100%);
+            height: 100vh;
+            width: $sidebar-width;
+            top: 0;
+            left: 0;
+        }
 
         a {
             color: rgba(#fff, 0.8);
