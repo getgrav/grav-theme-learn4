@@ -1,4 +1,4 @@
-{% set body_classes = page.header.body_classes %}
+{% set body_classes = body_classes ~ ' ' ~ page.header.body_classes %}
 {% extends 'partials/base.html.twig' %}
 
 {% set tags = page.taxonomy.tag %}
