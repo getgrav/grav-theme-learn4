@@ -41,23 +41,45 @@ a {
     }
 }
 
-// Table setup
-.table {
-    & table {
-        border-collapse: collapse;
-        border-spacing: 0;
-        width: initial;
+// Tables
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    @if $rtl == true {
+        text-align: right;
+    } @else {
         text-align: left;
-        margin-bottom: 1.2rem;
     }
 
-    &.table-keycol {
+    tbody {
+        tr:nth-of-type(odd) {
+            background: $bg-color;
+        }
+        tr {
+            &.active {
+                background: $bg-color-dark;
+            }
+        }
+    }
+
+    td,
+    th {
+        border-bottom: $border-width solid $border-color;
+        padding: $unit-3 $unit-2;
+    }
+    th {
+        border-bottom-width: $border-width-lg;
+    }
+
+    .table-keycol & {
         tr > td:first-child, tr > th:first-child  {
             white-space: nowrap;
             width: 15%;
         }
     }
 }
+
 
 img {
     max-width: 100%;
