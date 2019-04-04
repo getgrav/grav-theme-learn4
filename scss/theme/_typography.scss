@@ -218,6 +218,16 @@ pre.xdebug-var-dump {
     .no-margin-bottom .code-toolbar {
         margin-bottom: 0;
     }
+
+    .line-highlight {
+        background: linear-gradient(to right, rgba($highlight-color, 0.3) 70%, rgba($highlight-color, 0));
+        &:before {
+            background-color: darken($highlight-color, 30%);
+            //color: #999;
+            box-shadow: none;
+            top: 0.15rem;
+        }
+    }
 }
 
 // Icon Tweaks
