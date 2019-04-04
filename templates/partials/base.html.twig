@@ -16,13 +16,9 @@
     <link rel="canonical" href="{{ page.url(true, true) }}" />
 {% endblock head %}
 
-    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
-
-
 {% block stylesheets %}
     {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
     {% do assets.addCss('theme://css-compiled/theme'~compress) %}
-    {% do assets.addCss('theme://css/custom.css') %}
     {% do assets.addCss('theme://css/fork-awesome.min.css') %}
 {% endblock %}
 
