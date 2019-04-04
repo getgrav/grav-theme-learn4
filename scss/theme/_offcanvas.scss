@@ -48,14 +48,6 @@
             border-bottom: 1px solid rgba(#fff, 0.1);
         }
 
-        .simplebar-scrollbar {
-            width: 5px;
-            &:before {
-                background: rgba(#fff, 0.5);
-            }
-
-        }
-
         .learn-brand {
             position: fixed;
             height: $sidebar-brand-height;
