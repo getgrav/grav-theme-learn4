@@ -17,9 +17,9 @@
 {% endblock head %}
 
 {% block stylesheets %}
+    {% do assets.addCss('theme://css/fork-awesome.min.css') %}
     {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
     {% do assets.addCss('theme://css-compiled/theme'~compress) %}
-    {% do assets.addCss('theme://css/fork-awesome.min.css', {position: 'before'}) %}
 {% endblock %}
 
 {% block javascripts %}
