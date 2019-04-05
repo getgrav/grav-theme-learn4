@@ -1,4 +1,5 @@
 {% macro loop(page, parent_loop) %}
+  {% import _self as macros %}
   {% if parent_loop|length > 0 %}
     {% set data_level = parent_loop %}
   {% else %}
