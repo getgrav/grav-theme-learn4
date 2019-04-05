@@ -41,7 +41,7 @@ h1 {
 a {
     @extend .default-animation;
 
-    &:hover {
+    &:hover, &:focus, &:active, &.active {
         color: $link-color-dark;
         text-decoration: none;
     }
@@ -49,6 +49,10 @@ a {
     &:focus {
         outline: none !important;
         box-shadow: none !important;
+    }
+
+    &:visited {
+        color: $link-color;
     }
 }
 

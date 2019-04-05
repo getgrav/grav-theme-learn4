@@ -25,6 +25,8 @@ $asbestos: #7F8C8D;
 $primary-color: #1AA3ED !default;
 $secondary-color: #38C5C7 !default;
 $dark-color: #454d5d !default;
+$body-font-color: darken($dark-color, 5%) !default;
+$link-color: darken($primary-color, 5%) !default;
 $gray-color: lighten($dark-color, 40%) !default;
 $gray-color-dark: darken($gray-color, 25%) !default;
 $border-color: lighten($dark-color, 60%) !default;
@@ -35,8 +37,6 @@ $selection-color: #ECECFE;
 // Sidebar
 $sidebar-width: 14rem;
 $sidebar-brand-height: 7rem;
-$sidebar-gradient-color1: $wisteria;
-$sidebar-gradient-color2: $deep-well;
 
 // Fonts
 $base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
@@ -44,4 +44,4 @@ $mono-font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, mo
 $fallback-font-family: "Helvetica Neue", sans-serif !default;
 $body-font-family: $base-font-family, $fallback-font-family !default;
 $title-font-family: "Novacento Sans Wide", $base-font-family, $fallback-font-family !default;
-$min-responsive-font-size: 16px;
+$min-responsive-font-size: 18px;
