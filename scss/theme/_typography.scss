@@ -4,6 +4,7 @@ html {
 
 body {
     font-weight: 200;
+    letter-spacing: 0.015rem;
     ::selection {
         background: $selection-color;
     }
@@ -23,6 +24,8 @@ mark {
 
 // Header Overrides
 h1, h2, h3, h4, h5, h6 {
+    font-family: $title-font-family;
+    letter-spacing: -0.05rem;
     margin-top: 2rem;
     color: darken($body-font-color, 10%);
     line-height: 1;
