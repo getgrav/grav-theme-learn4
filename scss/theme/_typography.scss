@@ -203,6 +203,10 @@ pre.xdebug-var-dump {
         }
     }
 
+    code[class*="language-"], pre[class*="language-"] {
+        font-family: $mono-font-family;
+    }
+
     pre[class*="language-"] {
         font-size: .7rem;
         code {
