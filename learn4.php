@@ -1,7 +1,6 @@
 <?php
 namespace Grav\Theme;
 
-use Grav\Common\Grav;
 use Grav\Common\Theme;
 use Pimple\Exception\UnknownIdentifierException;
 use RocketTheme\Toolbox\Event\Event;
