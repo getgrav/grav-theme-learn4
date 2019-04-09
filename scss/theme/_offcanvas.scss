@@ -97,6 +97,13 @@
                 margin-left: 1rem;
                 margin-top: .2rem;
 
+                &.topics {
+                    margin-top: 0;
+                    > li:first-child {
+                        margin-top: 0;
+                    }
+                }
+
                 a {
                     display: block;
                     padding-top: 0.1rem;
