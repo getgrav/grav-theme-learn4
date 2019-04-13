@@ -107,10 +107,22 @@ table {
 }
 
 
-img {
+img, .video-container {
     max-width: 100%;
-    margin: 0 auto;
+    margin: 3rem auto;
     display: block;
+    text-align: center;
+
+
+    &.border {
+        border: 2px solid #e6e6e6 !important;
+        padding: 2px;
+    }
+
+    &.shadow {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
 }
 
 ul, ol {
