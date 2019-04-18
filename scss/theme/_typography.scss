@@ -125,6 +125,11 @@ img, .video-container {
 
 }
 
+hr {
+    border: 0;
+    border-top: 1px solid $border-color;
+}
+
 ul, ol {
     margin: 0 0 1.2rem 0;
 
