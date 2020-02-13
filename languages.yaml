@@ -15,10 +15,14 @@ cs:
     THEME_LEARN4_BUILT_WITH_GRAV: Postaveno na <a href="http://getgrav.org">Grav</a> - Moderní správce obsahu pomocí souborů prostých textů
     THEME_LEARN4_SEARCH_DOCUMENTATION: Vyhledat v dokumentaci
 de:
+    THEME_LEARN4_GITHUB_EDIT: Bearbeiten
+    THEME_LEARN4_GITHUB_EDITON: Seite auf GitHub bearbeiten
     THEME_LEARN4_GITHUB_NOTE: Fehler gefunden? Möchten Sie diese Seite verbessern?
     THEME_LEARN4_CLEAR_HISTORY: Verlauf löschen
     THEME_LEARN4_BUILT_WITH_GRAV: Seite erstellt mit <a href="http://getgrav.org">Grav</a> - The Modern Flat File CMS
     THEME_LEARN4_SEARCH_DOCUMENTATION: Dokumentation durchsuchen
+    THEME_LEARN4_TOPNAV_NEXT: Nächste Seite [&rarr;]
+    THEME_LEARN4_TOPNAV_PREV: Vorherige Seite [&larr;]
 es:
     THEME_LEARN4_GITHUB_NOTE: ¿Encontraste errores? ¿Crees que puedes mejorar esta documentación?
     THEME_LEARN4_CLEAR_HISTORY: Limpiar historial
