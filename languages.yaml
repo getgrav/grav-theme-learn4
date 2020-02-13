@@ -1,9 +1,12 @@
 en:
     THEME_LEARN4_GITHUB_EDIT: Edit
+    THEME_LEARN4_GITHUB_EDITON: Edit this page on GitHub
     THEME_LEARN4_GITHUB_NOTE: "Found errors? Think you can improve this documentation? Simply click the <strong><i class=\"fa fa-pencil-square\"></i> Edit</strong> link at the top of the page, and then the <strong><i class=\"fa fa-pencil\"></i></strong> icon on Github to make your changes."
     THEME_LEARN4_CLEAR_HISTORY: Clear History
     THEME_LEARN4_BUILT_WITH_GRAV: Built with <a href="http://getgrav.org">Grav</a> - The Modern Flat File CMS
     THEME_LEARN4_SEARCH_DOCUMENTATION: Search...
+    THEME_LEARN4_TOPNAV_NEXT: Next Page [&rarr;]
+    THEME_LEARN4_TOPNAV_PREV: Previous Page [&larr;]
 cn:
     THEME_LEARN4_GITHUB_NOTE: 发现错误？请帮忙改进，谢谢！
     THEME_LEARN4_CLEAR_HISTORY: 清除历史
