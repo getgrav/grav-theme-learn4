@@ -184,7 +184,7 @@ body { font-weight: 300; letter-spacing: -0.015rem; }
 
 body ::-moz-selection { background: #ECECFE; }
 
-body ::selection { background: #ECECFE; }
+body :selection { background: #7b429f; color: white }
 
 div { min-width: 0; }
 
@@ -252,7 +252,7 @@ pre.xdebug-var-dump { background: #fafafa; display: block; padding: 1rem; line-h
 
 #body-inner pre ::-moz-selection { background: #ECECFE; }
 
-#body-inner pre ::selection { background: #ECECFE; }
+#body-inner pre :selection { background: #7b429f; color: white }
 
 #body-inner code { word-break: break-word; }
 
