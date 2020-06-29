@@ -1,9 +1,8 @@
+{% set body_classes = 'center-content' %}
 {% extends 'docs.html.twig' %}
 
 {% block content %}
     <div id="chapter">
-        <div id="body-inner">
-            {{ page.content }}
-        </div>
+        {{ page.content|raw }}
     </div>
 {% endblock %}

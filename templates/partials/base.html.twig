@@ -1,4 +1,4 @@
-{% set body_classes = body_class(['header-fixed', 'header-animated', 'header-dark', 'header-transparent', 'sticky-footer']) %}
+{% set github_config = theme_var('github') %}
 {% set grid_size = theme_var('grid-size') %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
 <!DOCTYPE html>
@@ -17,18 +17,14 @@
 {% endblock head %}
 
 {% block stylesheets %}
+    {% do assets.addCss('theme://css/fork-awesome.min.css') %}
     {% do assets.addCss('theme://css-compiled/spectre'~compress) %}
-    {% if theme_var('spectre.exp') %}{% do assets.addCss('theme://css-compiled/spectre-exp'~compress)  %}{% endif %}
-    {% if theme_var('spectre.icons') %}{%  do assets.addCss('theme://css-compiled/spectre-icons'~compress) %}{% endif %}
     {% do assets.addCss('theme://css-compiled/theme'~compress) %}
-    {% do assets.addCss('theme://css/custom.css') %}
-    {% do assets.addCss('theme://css/line-awesome.min.css') %}
 {% endblock %}
 
 {% block javascripts %}
     {% do assets.addJs('jquery', 101) %}
-    {% do assets.addJs('theme://js/jquery.treemenu.js', {group:'bottom'}) %}
-    {% do assets.addJs('theme://js/site.js', {group:'bottom'}) %}
+    {% do assets.addJs('theme://js/learn4.js', { group:'bottom' }) %}
 {% endblock %}
 
 {% block assets deferred %}
@@ -36,7 +32,7 @@
     {{ assets.js()|raw }}
 {% endblock %}
 </head>
-<body id="top" class="{% block body_classes %}{{ body_classes }}{% endblock %}">
+<body id="top" class="{{ sidebar_color }} {% block body_classes %}{{ body_classes|trim }}{% endblock %}" data-url="{{ page.route }}">
     <div id="page-wrapper" class="off-canvas off-canvas-sidebar-show">
         <!-- off-screen toggle button -->
         <a class="off-canvas-toggle btn btn-primary btn-action" href="#sidebar-id">
@@ -51,7 +47,9 @@
         <a class="off-canvas-overlay" href="#close"></a>
 
         <div class="learn-content off-canvas-content">
-            {% block hero %}{% endblock %}
+            {% block topbar %}
+                {% include 'partials/topbar.html.twig' %}
+            {% endblock %}
 
             <section id="start">
                 {% block body %}
@@ -59,17 +57,6 @@
                         <section class="container {{ grid_size }}">
                             {% block messages %}
                                 {% include 'partials/messages.html.twig' ignore missing %}
-                            {% endblock %}
-                            {% block navigation %}
-                            <div id="learn-navigation">
-                                {% if not progress.isFirst(page.path) %}
-                                    <a class="nav-prev" href="{{ progress.nextSibling(page.path).url }}"> <i class="fa fa-chevron-left"></i></a>
-                                {% endif %}
-
-                                {% if not progress.isLast(page.path) %}
-                                    <a class="nav-next" href="{{ progress.prevSibling(page.path).url }}"><i class="fa fa-chevron-right"></i></a>
-                                {% endif %}
-                            </div>
                             {% endblock %}
                             {% block content %}{% endblock %}
                         </section>
@@ -83,10 +70,9 @@
         </div>
     </div>
 
-
     {% block bottom %}
+        <script src="https://unpkg.com/simplebar@4.0.0-alpha.4/dist/simplebar.min.js"></script>
         {{ assets.js('bottom')|raw }}
     {% endblock %}
-
 </body>
 </html>

@@ -1,8 +1,9 @@
 <?php
 namespace Grav\Theme;
 
-use Grav\Common\Grav;
 use Grav\Common\Theme;
+use Pimple\Exception\UnknownIdentifierException;
+use RocketTheme\Toolbox\Event\Event;
 
 class Learn4 extends Theme
 {
@@ -25,8 +26,6 @@ class Learn4 extends Theme
 
         if ($query) {
             $page = $e['page'];
-            $query = $e['query'];
-            $options = $e['options'];
             $fields = $e['fields'];
 
             $fields->results[] = $page->route();
@@ -36,8 +35,13 @@ class Learn4 extends Theme
 
     public function onTwigInitialized()
     {
-        $sc = $this->grav['shortcode'];
-        $sc->getHandlers()->addAlias('version', 'lang');
+        try {
+            $sc = $this->grav['shortcode'];
+            $sc->getHandlers()->addAlias('version', 'lang');
+        } catch (UnknownIdentifierException $e) {
+
+        }
+
 
         $twig = $this->grav['twig'];
 
@@ -58,6 +62,16 @@ class Learn4 extends Theme
         ];
 
         $twig->twig_vars = array_merge($twig->twig_vars, $form_class_variables);
+
+        $color = $this->grav['uri']->query('color');
+
+        if (in_array($color, ['purple', 'green', 'blue', 'contrast'])) {
+            setcookie("sidebar-pref", $color, 0, '/');
+        } else {
+            $color = filter_input(INPUT_COOKIE, 'sidebar-pref') ?: 'purple';
+        }
+
+        $twig->twig_vars['sidebar_color'] = "sidebar-$color";
 
     }
 

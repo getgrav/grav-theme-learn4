@@ -1,3 +1,4 @@
+{% set body_classes = body_classes ~ ' ' ~ page.header.body_classes %}
 {% extends 'partials/base.html.twig' %}
 
 {% set tags = page.taxonomy.tag %}
@@ -8,5 +9,9 @@
 {% endif %}
 
 {% block content %}
+    {% include 'partials/toc.html.twig' %}
+
     {% include 'partials/page.html.twig' %}
+
+    {% include 'partials/github-note.html.twig' %}
 {% endblock %}

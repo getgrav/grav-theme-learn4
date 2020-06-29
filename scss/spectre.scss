@@ -1,4 +1,5 @@
 // Variables and mixins
+@import "theme/variables";
 @import "spectre/variables";
 @import "spectre/mixins";
 
@@ -39,14 +40,16 @@
 @import "spectre/panels";
 @import "spectre/popovers";
 @import "spectre/steps";
-@import "spectre/tabs";
+//@import "spectre/tabs";
 @import "spectre/tiles";
 @import "spectre/toasts";
 @import "spectre/tooltips";
+
 
 // Utility classes
 @import "spectre/animations";
 @import "spectre/utilities";
 
 // Extras
+@import "spectre/off-canvas";
 @import "theme/extensions";
