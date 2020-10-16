@@ -2,13 +2,17 @@
 namespace Grav\Theme;
 
 use Grav\Common\Theme;
+use Grav\Plugin\ShortcodeManager;
+use Grav\Theme\Learn4\Shortcodes\VersionShortcode;
 use Pimple\Exception\UnknownIdentifierException;
 use RocketTheme\Toolbox\Event\Event;
 
 class Learn4 extends Theme
 {
-    public static function getSubscribedEvents() {
+    public static function getSubscribedEvents(): array
+    {
         return [
+            'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
             'onTwigInitialized' => ['onTwigInitialized', 0],
             'onTwigPageVariables' => ['onTwigPageVariables', 0],
             'onTNTSearchQuery' => ['onTNTSearchQuery', 1000],
@@ -20,7 +24,7 @@ class Learn4 extends Theme
         $this->grav['twig']->twig_vars['grav_version'] = GRAV_VERSION;
     }
 
-    public function onTNTSearchQuery(Event $e)
+    public function onTNTSearchQuery(Event $e): void
     {
         $query = $this->grav['uri']->param('q');
 
@@ -33,16 +37,15 @@ class Learn4 extends Theme
         }
     }
 
-    public function onTwigInitialized()
+    public function onShortcodeHandlers(): void
     {
-        try {
-            $sc = $this->grav['shortcode'];
-            $sc->getHandlers()->addAlias('version', 'lang');
-        } catch (UnknownIdentifierException $e) {
+        /** @var ShortcodeManager $sc */
+        $sc = $this->grav['shortcode'];
+        $sc->registerAllShortcodes(__DIR__ . '/classes/Shortcodes');
+    }
 
-        }
-
-
+    public function onTwigInitialized(): void
+    {
         $twig = $this->grav['twig'];
 
         $form_class_variables = [
