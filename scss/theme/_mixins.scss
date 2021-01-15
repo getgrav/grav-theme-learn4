@@ -38,7 +38,7 @@
 @mixin button-primary() {
   background: $primary-color;
   border-color: $primary-color-dark;
-  color: $light-color;
+  color: $light-color !important;
   &:focus,
   &:hover {
     background: darken($primary-color-dark, 2%);

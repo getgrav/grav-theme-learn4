@@ -150,6 +150,10 @@ ul, ol {
     }
 }
 
+.button-primary {
+    @include button-primary;
+  }
+
 #chapter {
     text-align: center;
     max-width: 600px;
@@ -416,6 +420,20 @@ $tabs-bg: #F8F9FA;
         color: #3d8b3d;
     }
 
+}
+
+// Twig Tags/Filters/Functions
+.twig__headers {
+    h3 + h4 {
+        margin-top: -.3rem;
+        font-size: 120%;
+    }
+
+    h3 code {
+        font-weight: bold;
+        color: darken($body-font-color, 10%);
+        background: none;
+    }
 }
 
 
