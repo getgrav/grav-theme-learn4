@@ -256,9 +256,11 @@
     }
 }
 
-/** Defaults (purple) **/
-.off-canvas .learn-sidebar:before {
-    background: linear-gradient(150deg, #0766E2 0, #A638F5 100%);
+/** Default **/
+body.sidebar-purple {
+  .off-canvas .learn-sidebar:before {
+      background: linear-gradient(150deg, #0766E2 0, #A638F5 100%);
+  }
 }
 
 /** Secondary (green) **/
