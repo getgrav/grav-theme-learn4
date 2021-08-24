@@ -41,6 +41,18 @@ it:
     CLEAR_HISTORY: Cancella cronologia
     BUILT_WITH_GRAV: Built with <a href="http://getgrav.org">Grav</a> - The Modern Flat File CMS
     SEARCH_DOCUMENTATION: Cerca nella documentatione
+pt:
+  THEME_LEARN4:
+    GITHUB_NOTE: Encontrou erros? Achas que pode melhorar esta documentação?
+    CLEAR_HISTORY: Limpar histórico
+    BUILT_WITH_GRAV: Feito com <a href="http://getgrav.org">Grav</a> - O CMS Moderno de ficheiros planos
+    SEARCH_DOCUMENTATION: Procurar documentação
+pt-BR:
+  THEME_LEARN4:
+    GITHUB_NOTE: Encontrou erros? Acha que pode melhorar essa documentação?
+    CLEAR_HISTORY: Limpar histórico
+    BUILT_WITH_GRAV: Feito com <a href="http://getgrav.org">Grav</a> - O CMS Moderno de arquivos planos
+    SEARCH_DOCUMENTATION: Procurar documentação
 ru:
   THEME_LEARN4:
     GITHUB_NOTE: Нашли ошибки? Думаете, что можете улучшить документацию?
