@@ -70,7 +70,7 @@
         </div>
     </div>
 
-    {% include 'partials/algolia-pro/instantsearch.html.twig' with { index: 'pages-' ~ grav.language.active ~ '-grav-learn' } %}
+    {% include 'partials/algolia-pro/instantsearch.html.twig' with { index: 'pages' } %}
 
     {% block bottom %}
         <script src="https://unpkg.com/simplebar@4.0.0-alpha.4/dist/simplebar.min.js"></script>
