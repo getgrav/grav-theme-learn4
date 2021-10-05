@@ -209,6 +209,10 @@ pre.xdebug-var-dump {
         word-break: break-word;
     }
 
+    .prism-wrapper {
+        overflow: hidden;
+    }
+
     .code-toolbar {
         margin: 0.5rem 0;
         pre[class*="language-"] {
