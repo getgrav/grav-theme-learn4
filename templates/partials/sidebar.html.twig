@@ -3,7 +3,10 @@
 <div class="learn-brand">
     <div id="header">
         <a id="logo" href="{{ theme_config.home_url ?: base_url_absolute }}">{% include 'partials/logo.html.twig' %}</a>
-        <div class="searchbox">
+        <div
+          class="searchbox"
+          data-algolia-pro-trigger
+        >
             <label for="search-by"><i class="fa fa-search"></i></label>
             <input id="search-by" type="text" placeholder="{{ 'THEME_LEARN4_SEARCH_DOCUMENTATION'|t }}"
                    data-search-input="{{ base_url_relative }}/s/q"/>
