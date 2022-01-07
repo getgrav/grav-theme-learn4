@@ -2,7 +2,6 @@ import $ from 'jquery';
 import './utils';
 import './toc';
 import './history';
-import './search';
 import './nav';
 
 $(window).on('load', function() {
@@ -15,6 +14,4 @@ $(window).on('load', function() {
             $(`[data-nav-id="${url}"]`).addClass('visited');
         }
     }
-
-    $('.highlightable').highlight(window.sessionStorage.getItem('search-value'), { element: 'mark' });
 });

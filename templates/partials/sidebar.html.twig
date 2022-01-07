@@ -3,18 +3,17 @@
 <div class="learn-brand">
     <div id="header">
         <a id="logo" href="{{ theme_config.home_url ?: base_url_absolute }}">{% include 'partials/logo.html.twig' %}</a>
-        <div
-          class="searchbox"
-          data-algolia-pro-trigger
-        >
-            <label for="search-by"><i class="fa fa-search"></i></label>
-            <input id="search-by" type="text" placeholder="{{ 'THEME_LEARN4_SEARCH_DOCUMENTATION'|t }}"
-                   data-search-input="{{ base_url_relative }}/s/q"/>
-            <span data-search-clear><i class="fa fa-close"></i></span>
-        </div>
-        <div class="search-options columns">
-            <div class="adv-search column col-8"><i class="fa fa-sliders"></i> <a href="{{ url('search') }}">Advanced</a></div>
-            {% include 'partials/versions.html.twig' %}
+        <div class="searchbox-container">
+            <div
+              class="searchbox"
+              data-algolia-pro-trigger
+            >
+                <label for="search-by"><i class="fa fa-search"></i></label>
+                <input id="search-by" type="text" placeholder="{{ 'THEME_LEARN4_SEARCH_DOCUMENTATION'|t }}" readonly>
+            </div>
+            <div class="search-options">
+                {% include 'partials/versions.html.twig' %}
+            </div>
         </div>
     </div>
 </div>
