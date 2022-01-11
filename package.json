@@ -5,14 +5,15 @@
   "author": "Team Grav",
   "license": "MIT",
   "scripts": {
-    "watch": "NODE_ENV=development webpack --watch --progress --colors --mode development --config webpack.conf.js",
-    "dev": "NODE_ENV=development webpack --progress --colors --config webpack.conf.js",
+    "watch": "NODE_ENV=development webpack --watch --progress --mode development --config webpack.conf.js",
+    "dev": "NODE_ENV=development webpack --progress --config webpack.conf.js",
     "prod": "NODE_ENV=production-wip webpack --mode development --config webpack.conf.js"
   },
   "dependencies": {
     "node-sass": "^7.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.7",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
     "babel-loader": "^8.2.3",

@@ -7,8 +7,12 @@ $(document).on('click', '.nav-prev, .nav-next', (event) => {
 });
 
 $(document).on('keydown', (event) => {
-    const item = event.which === 37 ? $('a.nav-prev') : (event.which === 39 ? $('a.nav-next') : null);
-    if (item) {
-        item.click();
+    const isAlgoliaOpen = !$('[data-algolia-pro][style="display: none;"]').length;
+
+    if (!isAlgoliaOpen) {
+        const item = event.which === 37 ? $('a.nav-prev') : (event.which === 39 ? $('a.nav-next') : null);
+        if (item) {
+            item.click();
+        }
     }
 });
