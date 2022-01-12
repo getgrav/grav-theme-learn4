@@ -10,7 +10,9 @@
             >
                 <label for="search-by"><i class="fa fa-search"></i></label>
                 <input id="search-by" type="text" placeholder="{{ 'THEME_LEARN4_SEARCH_DOCUMENTATION'|t }}" readonly>
-                <span class="search-shortcode">⌘K</span>
+                <span class="search-shortcode">
+                    {{ grav.browser.platform|starts_with('mac') ? '⌘K' : '<small>CTRL + K</small>' }}
+                </span>
             </div>
             <div class="search-options">
                 {% include 'partials/versions.html.twig' %}
