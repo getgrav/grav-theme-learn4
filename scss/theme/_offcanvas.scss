@@ -223,8 +223,9 @@
             span {
                 position: absolute;
                 right: 8px;
-                top: 2px;
-                cursor: pointer;
+                top: 50%;
+                font-size: 0.8rem;
+                transform: translateY(-50%);
             }
         }
 
